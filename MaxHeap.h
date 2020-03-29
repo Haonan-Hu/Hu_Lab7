@@ -9,7 +9,7 @@ class MaxHeap
 public:
   MaxHeap();
   ~MaxHeap();
-  void NewPatient(std::string firstName, std::string lastName, int urgency); //Add new patient to he system
+  void NewPatient(Patient patient); //Add new patient to he system
   void TreatPatient(); // Remove a patient from the records
   void ChangeUrgency(); // change urgency level
   void NextPatient(); //Print next patient to be treated

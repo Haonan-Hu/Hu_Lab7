@@ -12,9 +12,14 @@ MaxHeap::~MaxHeap()
   clear();
 }
 
-void MaxHeap::NewPatient(std::string firstName, std::string lastName, int urgency)
+void MaxHeap::NewPatient(Patient patient)
 {
-
+  if(m_arrSize == m_heapSize)
+  {
+    resize();
+  }
+  m_heapSize++;
+  m_arr[m_heapSize - 1] = patient;
 } //Add new patient to he system
 
 void MaxHeap::TreatPatient()
@@ -78,7 +83,10 @@ void MaxHeap::resize()
 
 void MaxHeap::heapifying()
 {
-
+  for(int i = m_arrSize -1 ; i >= 0; i--)
+  {
+    upHeap(i);
+  }
 }
 
 void MaxHeap::upHeap(int curIndex)
@@ -99,7 +107,7 @@ void MaxHeap::upHeap(int curIndex)
 
 void MaxHeap::downHeap(int curIndex)
 {
-  int leftChild = (3 * curIndex) + 1;
-  int middleChild = (3 * curIndex) + 2;
-  int rightChild = (3 * curIndex) + 3;
+  // int leftChild = (3 * curIndex) + 1;
+  // int middleChild = (3 * curIndex) + 2;
+  // int rightChild = (3 * curIndex) + 3;
 }

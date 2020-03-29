@@ -12,7 +12,27 @@ Brief:File is cpp file
 
 executive::executive(std::string fileName)
 {
-
+  std::ifstream infile;
+  infile.open(fileName);
+  std::string data;
+  std::string firstName;
+  std::string lastName;
+  int urgency;
+  if(infile.is_open())  //  file read successful
+  {
+    while(infile >> data) // make sure file input is valid
+    {
+      std::string firstName = "";
+      std::string lastName = "";
+      int urgency = 0;
+      Patient temp()
+    }
+    infile.close();
+    std::cout << "\e[1mFile reading done, ready for next step:\e[0m\n";
+    std::cout << "..................................\n\n";
+  }
+  else
+    std::cout << "Unable to open file\n";
 }
 
 executive::~executive(){}

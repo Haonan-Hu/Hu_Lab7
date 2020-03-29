@@ -22,6 +22,6 @@ public:
   */
   void run();
 private:
-
+  MaxHeap m_patient;
 };
 #endif
