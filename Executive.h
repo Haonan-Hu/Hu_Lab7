@@ -7,7 +7,8 @@ Brief:File is header file
 
 #ifndef EXECUTIVE_H
 #define EXECUTIVE_H
-#include "Heap.h"
+#include "MaxHeap.h"
+#include "MinHeap.h"
 #include <fstream>
 
 class executive
