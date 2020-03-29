@@ -6,7 +6,11 @@
 class Patient
 {
 public:
-  Patient();
+  Patient(){
+    p_firstName = "";
+    p_lastName = "";
+    p_urgency = 0;
+  }
   Patient(std::string firstName, std::string lastName, int urgency){
     p_firstName = firstName;
     p_lastName = lastName;
@@ -46,7 +50,7 @@ public:
   bool operator==(const Patient& rhs){
     return (this->p_urgency == rhs.p_urgency);
   }
-  
+
 private:
   std::string p_firstName;
   std::string p_lastName;

@@ -15,9 +15,9 @@ public:
   void NextPatient(); //Print next patient to be treated
   void LastPatient(); //print last patient to be treated
   void PatientToken(); //Find position of patient in the queue
-  int PatientCount()const;
+  int PatientCount()const; //get heap size
   void PatientsReport(); // print all patients info
-  int GetHeight() const; //get heap size
+  int GetArrSize() const; //get arr size
   void clear(); // clear the array
 
 
@@ -29,8 +29,7 @@ private:
 
   void resize(); //resize the array if needed
   void heapifying();
-  void upHeap(int index);
-  void downHeap(int index);
-
+  void upHeap(int curIndex);
+  void downHeap(int curIndex);
 };
 #endif
