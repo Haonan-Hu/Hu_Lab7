@@ -2,9 +2,9 @@ jake,co,5
 steve,bl,7
 dave,ck,11
 neon,bh,25
-tomjJason,9
+tom,jason,9
 rashid,peny,25
 austin,eker,25
-peyon,barber12
+peyon,barber,12
 john,kedy,2
 tim,gy,4
