@@ -14,14 +14,17 @@ Brief:File is header file
 class executive
 {
 public:
-  executive(std::string fileName);
+  executive(std::string doctorFile, std::string patientFile);
   ~executive();
   /**
   * @pre none
   * @post run the user controled panel
   */
   void run();
+  void doctor();
+  void patient();
 private:
   MaxHeap m_patient;
+  MinHeap m_doctor;
 };
 #endif

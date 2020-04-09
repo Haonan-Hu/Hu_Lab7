@@ -12,13 +12,13 @@ Brief:File is main file
 
 int main(int argc, char*argv[ ])
 {
-  if(argc < 2)
+  if(argc < 3)
   {
     std::cout << "Wrong number of parameters\n";
   }
   else
   {
-    executive exec(argv[1]);
+    executive exec(argv[1],argv[2]);
     exec.run();
   }
   return 0;

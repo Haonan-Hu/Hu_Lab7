@@ -2,34 +2,35 @@
 #define MAX_HEAP_H
 
 #include "Patient.h"
+#include <cmath>
 #include <iostream>
+#include <stdexcept>
 
 class MaxHeap
 {
-public:
-  MaxHeap();
-  ~MaxHeap();
-  void NewPatient(Patient patient); //Add new patient to he system
-  void TreatPatient(); // Remove a patient from the records
-  void ChangeUrgency(); // change urgency level
-  void NextPatient(); //Print next patient to be treated
-  void LastPatient(); //print last patient to be treated
-  void PatientToken(); //Find position of patient in the queue
-  int PatientCount()const; //get heap size
-  void PatientsReport(); // print all patients info
-  int GetArrSize() const; //get arr size
-  void clear(); // clear the array
-
-
 private:
-  Patient* m_arr;
-  int m_arrSize;
-  int m_heapSize;
+Patient *m_arr;
+int m_arrSize;
+int m_heapSize;
 
+public:
+MaxHeap(); //done
+~MaxHeap(); //done
+void clear(); //done
+void initalize(Patient*entry, int size); //done
+void insert(std::string firstName,std::string lastName,int priority); //done
+void treat(); //done
+void change_urgency(std::string firstName,std::string lastName,int priority); //done
+std::string next_patient(); //done
+std::string last_patient(); //done
+int patient_token(std::string firstName,std::string lastName); //done
+int getHeapSize(); //done
+void patient_report(); //done
+std::string search(std::string firstName,std::string lastName);
+bool check_duplicate(std::string firstName,std::string lastName); //done
+void heapify(int size,int index); //done
+void buildHeap(int size); //done
+void downheap(int index); //done
 
-  void resize(); //resize the array if needed
-  void heapifying();
-  void upHeap(int curIndex);
-  void downHeap(int curIndex);
 };
 #endif
